@@ -19,8 +19,8 @@ provider "aws" "config" {
       web_identity_token_file = var.identity_token_file
     }
 
-    default_tags {
-      tags = var.default_tags
+#    default_tags {
+#      tags = var.default_tags
     }
   }
 }
