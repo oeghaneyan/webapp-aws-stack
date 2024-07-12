@@ -21,6 +21,6 @@ provider "aws" "config" {
 
 #    default_tags {
 #      tags = var.default_tags
-    }
+#    }
   }
 }
