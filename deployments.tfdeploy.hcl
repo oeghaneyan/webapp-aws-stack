@@ -3,7 +3,7 @@ identity_token "aws" {
 }
 
 deployment "staging" {
-  variables = {
+  inputs = {
     aws_region          = "us-east-1"
     role_arn            = "arn:aws:iam::407603399482:role/oe_stacks_iam_role"   # Needs to be updated with new AssumeRole information
     identity_token_file = identity_token.aws.jwt_filename
@@ -15,7 +15,7 @@ deployment "staging" {
 
 
 deployment "production" {
-  variables = {
+  inputs = {
     aws_region          = "us-west-1"
     role_arn            = "arn:aws:iam::407603399482:role/oe_stacks_iam_role"   # Needs to be updated with new AssumeRole information
     identity_token_file = identity_token.aws.jwt_filename
